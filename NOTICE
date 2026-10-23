@@ -1,0 +1,8 @@
+agent-panel speaks the Agent Client Protocol through @agentclientprotocol/sdk
+(Apache-2.0, https://agentclientprotocol.com).
+
+The embeddable panel idea follows open-slide (MIT, copyright 2026 Yiwei Ho,
+https://github.com/open-slide/open-slide). This tree does not copy open-slide's
+provider runners or session store. Agent backends are ACP agents. Detection and
+launch of many local agents is covered by @tutti-os/agent-acp-kit. A full ACP
+workbench UI is covered by acp-components (https://github.com/Endlessworld/acp-components).

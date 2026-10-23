@@ -1,0 +1,8 @@
+node_modules
+dist
+.turbo
+packages/cli/skills
+examples/basic/dist
+examples/basic/sandbox/generated.txt
+*.tsbuildinfo
+coverage

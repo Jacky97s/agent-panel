@@ -1,0 +1,27 @@
+{
+  "name": "@agent-panel/cli",
+  "version": "0.1.0",
+  "description": "Install agent-panel skills into a project.",
+  "type": "module",
+  "license": "MIT",
+  "bin": {
+    "agent-panel": "./dist/cli.js"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/cli.d.ts",
+      "import": "./dist/cli.js"
+    }
+  },
+  "files": [
+    "dist",
+    "skills"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json && rm -rf skills && cp -R ../../skills skills",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "engines": {
+    "node": ">=20.19.0"
+  }
+}

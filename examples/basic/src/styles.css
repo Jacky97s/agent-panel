@@ -1,0 +1,59 @@
+body {
+  margin: 0;
+  background: #f7f4ee;
+  color: #1d1a16;
+  font-family: "Avenir Next", "Segoe UI", sans-serif;
+}
+
+.workspace {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 32px 20px 96px;
+}
+
+textarea {
+  width: 100%;
+  min-height: 180px;
+  box-sizing: border-box;
+  font:
+    16px / 1.5 "Iowan Old Style",
+    Palatino,
+    Georgia,
+    serif;
+}
+
+.modes,
+.row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin: 12px 0;
+}
+
+button {
+  font: inherit;
+  border: 1px solid #ddd4c8;
+  border-radius: 8px;
+  padding: 8px 12px;
+  background: #fff;
+}
+
+button[aria-pressed="true"] {
+  background: #2f5d50;
+  color: #fff;
+  border-color: transparent;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #1b1916;
+    color: #f3efe8;
+  }
+
+  textarea,
+  button {
+    background: #24211d;
+    color: inherit;
+    border-color: #3a342d;
+  }
+}
