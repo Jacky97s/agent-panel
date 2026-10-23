@@ -1,0 +1,137 @@
+.ap-root {
+  --ap-bg: #f7f4ee;
+  --ap-fg: #1d1a16;
+  --ap-muted: #6d655c;
+  --ap-border: #ddd4c8;
+  --ap-accent: #2f5d50;
+  --ap-accent-fg: #fff;
+  --ap-surface: #fff;
+  --ap-danger: #8d2f2f;
+  --ap-font: "Iowan Old Style", Palatino, Georgia, serif;
+  --ap-ui: "Avenir Next", "Segoe UI", sans-serif;
+  color: var(--ap-fg);
+  font-family: var(--ap-ui);
+}
+
+.ap-toggle {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  z-index: 20;
+  border: 0;
+  border-radius: 999px;
+  padding: 10px 16px;
+  background: var(--ap-accent);
+  color: var(--ap-accent-fg);
+  font: inherit;
+}
+
+.ap-dock {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 30;
+  width: min(100%, var(--ap-width, 380px));
+  height: 100%;
+  background: var(--ap-bg);
+  border-left: 1px solid var(--ap-border);
+}
+
+.ap-panel {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.ap-header,
+.ap-composer,
+.ap-row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.ap-header {
+  justify-content: space-between;
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--ap-border);
+}
+
+.ap-transcript {
+  flex: 1;
+  overflow: auto;
+  padding: 14px;
+}
+
+.ap-user,
+.ap-tool,
+.ap-card {
+  margin: 0 0 10px;
+  padding: 8px 10px;
+  border: 1px solid var(--ap-border);
+  border-radius: 8px;
+  background: var(--ap-surface);
+}
+
+.ap-tool span,
+.ap-muted {
+  color: var(--ap-muted);
+}
+
+.ap-error {
+  color: var(--ap-danger);
+}
+
+.ap-composer {
+  padding: 12px;
+  border-top: 1px solid var(--ap-border);
+}
+
+.ap-composer textarea {
+  flex: 1;
+  min-height: 64px;
+  border: 1px solid var(--ap-border);
+  border-radius: 8px;
+  padding: 8px;
+  font: inherit;
+  background: var(--ap-surface);
+}
+
+.ap-composer button,
+.ap-card button,
+.ap-text-button {
+  border: 1px solid var(--ap-border);
+  border-radius: 8px;
+  padding: 8px 10px;
+  background: var(--ap-surface);
+  font: inherit;
+}
+
+.ap-composer button {
+  background: var(--ap-accent);
+  color: var(--ap-accent-fg);
+  border-color: transparent;
+}
+
+.ap-card fieldset {
+  border: 0;
+  margin: 8px 0;
+  padding: 0;
+}
+
+.ap-card label {
+  display: block;
+}
+
+@media (prefers-color-scheme: dark) {
+  .ap-root {
+    --ap-bg: #1b1916;
+    --ap-fg: #f3efe8;
+    --ap-muted: #b3aa9f;
+    --ap-border: #3a342d;
+    --ap-accent: #8fbfa8;
+    --ap-accent-fg: #14211b;
+    --ap-surface: #24211d;
+    --ap-danger: #f0a3a3;
+  }
+}

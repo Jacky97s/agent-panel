@@ -1,0 +1,31 @@
+{
+  "name": "@agent-panel/core",
+  "version": "0.1.0",
+  "description": "Capability registry and ACP client for agent-panel.",
+  "type": "module",
+  "license": "MIT",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./acp": {
+      "types": "./dist/acp.d.ts",
+      "import": "./dist/acp.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "@agentclientprotocol/sdk": "^2.0.1"
+  },
+  "engines": {
+    "node": ">=20.19.0"
+  },
+  "sideEffects": false
+}
